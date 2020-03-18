@@ -1,0 +1,2 @@
+# Deny access to .htaccess
+Deny from all

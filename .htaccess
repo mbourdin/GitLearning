@@ -1,0 +1,26 @@
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+# Deny access to Connection.php
+<Files Connection.php>
+Order allow,deny
+Deny from all
+</Files>
+# Deny access to Connection.php
+<Files Connection.php>
+Order allow,deny
+Deny from all
+</Files>
+# Deny access to todo.txt
+<Files TODO.TXT>
+Order allow,deny
+Deny from all
+</Files>
+
+# Disable directory browsing
+Options -Indexes
+
+# Hide the contents of directories
+IndexIgnore *

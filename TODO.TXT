@@ -1,0 +1,7 @@
+
+Transformer les formulaires pour que toute l'application fonctionne avec des appels AJAX
+(pas de rechargement de la page lors d'une modification, insertion ou suppression d'utilisateur).
+
+Ajouter colonne mot de pass crypté , systeme d'authentification
+
+rassembler les traitements CRUD de user en une seule page.
