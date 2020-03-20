@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"]."/GitLearning/Connection.php";
+require_once $_SERVER["DOCUMENT_ROOT"]."/Connection.php";
 
 class Utilisateur
 {

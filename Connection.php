@@ -2,9 +2,10 @@
 
 
 session_start();
-$connection_host = '127.0.0.1';
+$connection_host = '127.0.0.1:3308';
 $connection_db = 'GitLearning';
-$connection_user = 'mbourdin';
+//$connection_user = 'mbourdin';
+$connection_user = 'root';
 $connection_pass = '';
 $charset = 'utf8mb4';
 
