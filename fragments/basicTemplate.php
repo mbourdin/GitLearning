@@ -1,5 +1,5 @@
 <?php
-require_once '../Connection.php';
+require_once (__DIR__ . '/../Connection.php');
 function curPageName()
 {
     return basename(substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1), ".php");

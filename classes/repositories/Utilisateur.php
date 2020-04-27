@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"]."/GitLearning/Connection.php";
+require_once __DIR__."/../../Connection.php";
 
 class Utilisateur
 {
@@ -62,7 +62,7 @@ class Utilisateur
     }
     public static function getAll():?Array
     {
-        $users=$GLOBALS["pdo"]->query("SELECT id,username,email,privileges FROM USER")->fetchAll();
+        $users=$GLOBALS["pdo"]->query("SELECT id,username,email,privileges FROM user")->fetchAll();
         return $users;
     }
     public static function delete(int $id)

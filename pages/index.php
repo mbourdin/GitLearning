@@ -1,6 +1,6 @@
 <?php
-require "../classes/repositories/Utilisateur.php";
+require __DIR__."/../classes/repositories/Utilisateur.php";
 //repositories en premier
 
 //template view en dernier
-require '../fragments/basicTemplate.php';
+require __DIR__.'/../fragments/basicTemplate.php';

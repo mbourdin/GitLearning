@@ -1,6 +1,6 @@
 <?php
 //repositories en premier
-require "../classes/repositories/Utilisateur.php";
+require  __DIR__."/../classes/repositories/Utilisateur.php";
 
 //requetes et traitements
 if(isset($_POST["username"]))
@@ -21,4 +21,3 @@ else
     echo "username ou password non rempli";
 }
 //template view en dernier
-//header("location: index.php");

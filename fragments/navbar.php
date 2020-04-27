@@ -14,9 +14,7 @@
                 echo("<li class='nav-item'>connecte en tant que "
                     . $_SESSION["user"]->username . "<br /><a class='nav-link text-center' href='logout.php'>logout</a></li>");
 
-                echo "<li class='nav-item'>
-                    <a class='nav-link' href='victory.php'>WIN</a>
-                </li>";
+
             } else {
                 echo '<li>
 <!-- Trigger the modal with a button -->
