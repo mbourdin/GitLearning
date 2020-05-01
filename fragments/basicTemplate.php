@@ -1,16 +1,14 @@
 <?php
 require_once (__DIR__ . '/../Connection.php');
-function curPageName()
-{
-    return basename(substr($_SERVER["SCRIPT_NAME"], strrpos($_SERVER["SCRIPT_NAME"], "/") + 1), ".php");
-}
+
+
 
 //echo "The current page name is ".curPageName();
 
 
 
 echo '<!DOCTYPE html>
-<html>';
+<html lang="fr">';
 // HEAD
 
 require "head.php";
@@ -26,13 +24,19 @@ echo '<body>';
 
 
 //  PAGE CONTENT
-require "../views/" . curPageName() . "View.php";
+if($route!="/" && $route!="/index" && $route!="/index.php" && $route!="/index.html")
+{
+    require __DIR__."/../views".$GLOBALS["routePrefix"]."View.php";
+
+}
 
 //END PAGE CONTENT
 
 
 //SCRIPTS
-require("scripts.php") ?>
+require("scripts.php");
+
+    ?>
 <!--END SCRIPTS-->
 
 </body>

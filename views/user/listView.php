@@ -1,5 +1,5 @@
 <h1>creer un utilisateur</h1>
-<form method="post" action="../pages/userCreate.php" id="createUserForm">
+<form method="post" action="create" id="createUserForm">
 <table class="table table-bordered table-responsive">
     <thead class="text-center">
     <tr>
@@ -38,15 +38,18 @@
     <tbody>
     <?php
 
+
     foreach ($users as $user) {
 
-        echo "<tr>";
-        foreach ($user as $key => $value) {
-            echo "<td>" . $value . "</td>";
-        }
+        echo "<tr id='".$user["id"]."'>";
+
+        echo "<td>".$user['id']."</td>";
+        echo "<td>".$user['username']."</td>";
+        echo "<td>".$user['email']."</td>";
+        echo "<td>".$user['privileges']."</td>";
         echo '<td>
-                <a class="btn btn-danger" href="userDelete.php?id='.$user["id"].'">DELETE</a>
-                <a class="btn btn-primary" href="userEdit.php?id='.$user["id"].'">EDIT</a>
+                <a class="btn btn-danger deleteLink" href="delete?id='.$user["id"].'">DELETE</a>
+                <a class="btn btn-primary editLink" href="edit?id='.$user["id"].'">EDIT</a>
                </td>
         </tr>';
     }

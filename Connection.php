@@ -1,7 +1,6 @@
 <?php
 
 
-session_start();
 $connection_host = '127.0.0.1';
 $connection_db = 'GitLearning';
 $connection_user = 'root';

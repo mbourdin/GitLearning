@@ -3,19 +3,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Index</a>
+                <a class="nav-link" href="<?= $GLOBALS["serverRoot"]?>/index">Index</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="userList.php">User list</a>
+                <a class="nav-link" href="<?= $GLOBALS["serverRoot"]?>/user/list">User list</a>
             </li>
 
             <?php
             if (isset($_SESSION["user"])) {
                 echo("<li class='nav-item'>connecte en tant que "
-                    . $_SESSION["user"]->username . "<br /><a class='nav-link text-center' href='logout.php'>logout</a></li>");
+                    . $_SESSION["user"]->username . "<br /><a class='nav-link text-center' href='logout'>logout</a></li>");
 
 
-            } else {
+            } else
+ {
                 echo '<li>
 <!-- Trigger the modal with a button -->
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">login</button>
@@ -39,7 +40,7 @@
             <!--                <h4 class="modal-title">Modal Header</h4>-->
             <!--            </div>-->
             <div class="modal-body">
-                <form action="login.php" method=post>
+                <form action="<?= $GLOBALS["serverRoot"]?>/login" method=post>
                     <label for="usernameLoginInput">username</label>
                     <input type="text" name="username" id="usernameLoginInput">
                     <br>
